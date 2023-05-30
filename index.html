@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <button onclick="openFilter()" class="nav__filterBtn">Filters</button>
+    </nav>
+    <section class="products">
+        <div class="product__container">
+            <img class="product__img" src="images/black-bag.jpg" alt="">
+            <div>
+                <span class="product__price">20$</span>
+                <button class="product__addBtn"><i class="bi bi-plus-circle-fill"></i></button>
+            </div>
+        </div>
+        <div class="product__container">
+            <img class="product__img"src="images/magneta-top.jpg" alt="">
+            <div>
+                <span class="product__price">22$</span>
+                <button class="product__addBtn"><i class="bi bi-plus-circle-fill"></i></button>
+            </div>
+        </div>
+        <div class="product__container">
+            <img class="product__img"src="images/blue-jeans-shoes.jpg" alt="">
+            <div>
+                <span class="product__price">22$</span>
+                <button class="product__addBtn"><i class="bi bi-plus-circle-fill"></i></button>
+            </div>
+        </div>
+        <div class="product__container">
+            <img class="product__img"src="images/green-skirt.jpg" alt="">
+            <div>
+                <span class="product__price">22$</span>
+                <button class="product__addBtn"><i class="bi bi-plus-circle-fill"></i></button>
+            </div>
+        </div>
+        <div class="product__container">
+            <img class="product__img"src="images/sunglasses-brown.jpg" alt="">
+            <div>
+                <span class="product__price">22$</span>
+                <button class="product__addBtn"><i class="bi bi-plus-circle-fill"></i></button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <a href="#tiktok"><i class="bi bi-tiktok"></i></a>
+        <a href="#instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#twitter"><i class="bi bi-twitter"></i></a>
+    </footer>
+    <div class="filter" id="filter">
+        <button onclick="closeFilter()" class="filter__exit">
+            <i class="bi bi-x-square-fill"></i>
+        </button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

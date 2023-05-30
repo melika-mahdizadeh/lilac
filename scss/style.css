@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+/* heading font sizes */
+/* base font size - applied at body / html level */
+/* font family */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button, a {
+  all: unset;
+  color: #673DE6;
+  cursor: pointer;
+}
+
+body {
+  background-color: #ebdfff;
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+}
+
+h1, span {
+  color: #673DE6;
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+  padding: 1.5rem;
+}
+nav .nav__filterBtn {
+  border: 0.1rem solid #673DE6;
+  padding: 0.5rem;
+  font-size: 18px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.products .product__container {
+  padding: 0.5rem;
+  border: solid 0.1rem #673DE6;
+}
+.products .product__container .product__img {
+  width: 100%;
+}
+.products .product__container div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.products .product__container div .product__addBtn, .products .product__container div .product__price {
+  font-size: 24px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+footer a {
+  font-size: 24px;
+}
+
+.filter {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #ebdfff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.filter .filter__exit {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 764px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .filter {
+    width: 400px;
+    border-left: #673DE6 0.1rem solid;
+  }
+}/*# sourceMappingURL=style.css.map */
