@@ -48,12 +48,12 @@ nav .nav__filterBtn {
 .products .product__container .product__img {
   width: 100%;
 }
-.products .product__container div {
+.products .product__container .product__details {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
 }
-.products .product__container div .product__addBtn, .products .product__container div .product__price {
+.products .product__container .product__details .product__addBtn, .products .product__container .product__details .product__price {
   font-size: 24px;
 }
 
