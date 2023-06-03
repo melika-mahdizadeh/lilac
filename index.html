@@ -23,6 +23,36 @@
         <button onclick="closeFilter()" class="filter__exit">
             <i class="bi bi-x-square-fill"></i>
         </button>
+        <div class="filter__container">
+            <button class="filter__dropdownBtn">
+                TYPE OF PRODUCT
+                <i class="bi bi-plus-lg"></i>
+            </button>
+            <div class="filter__content">
+                <a class="filter__content__select" onclick="filterProduct('bags')">BAGS</a>
+                <a class="filter__content__select" onclick="filterProduct('shoes')">SHOES</a>
+                <a class="filter__content__select" onclick="filterProduct('skirts')">SKIRTS</a>
+                <a class="filter__content__select" onclick="filterProduct('tops')">TOPS</a>
+                <a class="filter__content__select" onclick="filterProduct('sunglasses')">SUNGLASSES</a>
+            </div>
+            <button class="filter__dropdownBtn">
+                COLORS
+                <i class="bi bi-plus-lg"></i>
+            </button>
+            <div class="filter__content">
+                <a class="filter__content__select" onclick="filterProduct('black')"><div style="background-color: black;"></div>BLACK</a>
+                <a class="filter__content__select" onclick="filterProduct('blue')"><div style="background-color: rgb(119, 189, 255);"></div>BLUE</a>
+                <a class="filter__content__select" onclick="filterProduct('green')"><div style="background-color: rgb(162, 255, 139);"></div>GREEN</a>
+                <a class="filter__content__select" onclick="filterProduct('magneta')"><div style="background-color: magenta;"></div>MAGNETA</a>
+                <a class="filter__content__select" onclick="filterProduct('brown')"><div style="background-color: rgb(87, 46, 46);"></div>BROWN</a>
+                <a class="filter__content__select" onclick="filterProduct('yellow')"><div style="background-color: rgb(255, 255, 103);"></div>YELLOW</a>
+                <a class="filter__content__select" onclick="filterProduct('white')"><div style="background-color: white;"></div>White</a>
+                <a class="filter__content__select" onclick="filterProduct('white')"><div style="background-color: pink;"></div>pink</a>
+            </div>
+        </div>
+        <button onclick="filterProduct('all')" class="filter__content__select filter__clear">
+            clear
+        </button>
     </div>
     <script src="app.js"></script>
 </body>
