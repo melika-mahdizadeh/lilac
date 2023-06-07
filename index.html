@@ -10,7 +10,9 @@
 </head>
 <body>
     <nav>
+        <button onclick="openCart()" class="nav__cartBtn"><i class="bi bi-bag"></i><span><div class="nav__cartBtn__quantity">0</div></span></button>
         <button onclick="openFilter()" class="nav__filterBtn">Filters</button>
+        
     </nav>
     <section class="products" id="productsId">
     </section>
@@ -19,11 +21,11 @@
         <a href="#instagram"><i class="bi bi-instagram"></i></a>
         <a href="#twitter"><i class="bi bi-twitter"></i></a>
     </footer>
-    <div class="filter" id="filter">
-        <button onclick="closeFilter()" class="filter__exit">
+    <div class="filter sidemenu" id="filter">
+        <button onclick="closeFilter()" class="sidemenu__exit">
             <i class="bi bi-x-square-fill"></i>
         </button>
-        <div class="filter__container">
+        <div class="filter__container sidemenu__container">
             <button class="filter__dropdownBtn">
                 TYPE OF PRODUCT
                 <i class="bi bi-plus-lg"></i>
@@ -53,6 +55,27 @@
         <button onclick="filterProduct('all')" class="filter__content__select filter__clear">
             clear
         </button>
+    </div>
+    <div class="cart sidemenu" id="cart">
+        <button onclick="closeCart()" class="sidemenu__exit">
+            <i class="bi bi-x-square-fill"></i>
+        </button>
+        <div class="cart__container sidemenu__container">
+            <div class="cart__product">
+                <img src="images/pink-skirt.jpg" alt="">
+                <span>20$</span>
+                <div class="cart__product__num">
+                    <span><i class="bi bi-file-minus-fill"></i></span>
+                    <span>01</span>
+                    <span><i class="bi bi-file-plus-fill"></i></span>
+                </div>
+            </div>
+            <div class="cart__total">
+                <span>total:</span>
+                <span>200$</span>
+            </div>
+            <button class="cart__checkout">checkout</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

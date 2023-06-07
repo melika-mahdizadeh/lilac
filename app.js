@@ -78,35 +78,13 @@ for(let i of products.data) {
   const p = document.getElementById("productsId");
   let card = document.createElement("div");
   card.classList.add("product__container", i.category,"hide" , i.color);
-  p.appendChild(card);
-
-  //image
-  let productImage = document.createElement("img");
-  productImage.setAttribute("src", i.image);
-  productImage.classList.add("product__img");
-  card.appendChild(productImage);
-
-  // a div for price and add btn
-  let productDetails = document.createElement("div");
-  productDetails.classList.add("product__details");
-  card.append(productDetails);
-
-  //price
-  let productPrice = document.createElement("span");
-  productPrice.innerHTML = i.price + "$";
-  productPrice.classList.add("product__price");
-  productDetails.append(productPrice);
-
-  //add btn
-  let productBtn = document.createElement("button");
-  productBtn.classList.add("product__addBtn");
-  productDetails.append(productBtn);
-
-  //the icon of add btn
-  let icon = document.createElement("i");
-  icon.classList.add("bi","bi-plus-circle-fill");
-  productBtn.append(icon);
-
+  card.innerHTML =`
+  <img class="product__img" src="${i.image}">
+  <div>
+    <span class="product__price">${i.price}$</span>
+    <button class="product__addBtn"><i class="bi bi-plus-circle-fill"></i></button>
+  </div>`;
+    p.appendChild(card);
 }
 
 
@@ -120,7 +98,16 @@ function closeFilter() {
     document.getElementById("filter").style.visibility = "hidden";
     document.getElementById("filter").style.opacity = "0";
 }
-
+/* cart open & close btns */
+/* filter open & close btns */
+function openCart() {
+  document.getElementById("cart").style.visibility = "visible";
+  document.getElementById("cart").style.opacity = "1";
+}
+function closeCart() {
+  document.getElementById("cart").style.visibility = "hidden";
+  document.getElementById("cart").style.opacity = "0";
+}
 /* filter dropdown menus */
 var dropdown = document.getElementsByClassName("filter__dropdownBtn");
 var i;
@@ -176,3 +163,31 @@ window.onload = () => {
 };
 
 
+// how many items are in cart
+let carts = document.querySelectorAll('.product__addBtn');
+
+for (let i=0; i<carts.length; i++) {
+  carts[i].addEventListener('click', () => {
+    cartNumbers();
+  })
+}
+
+function onLoadCartNumbers() {
+  let productNumbers = localStorage.getItem('cartNumbers');
+  if(productNumbers) {
+    document.querySelector('.nav__cartBtn__quantity').textContent = productNumbers;
+  }
+}
+
+function cartNumbers() {
+  let productNumbers = localStorage.getItem('cartNumbers');
+  productNumbers = parseInt(productNumbers);
+  if( productNumbers) {
+    localStorage.setItem('cartNumbers', productNumbers + 1);
+    document.querySelector('.nav__cartBtn__quantity').textContent = productNumbers + 1;
+  } else {
+    localStorage.setItem('cartNumbers', 1);
+    document.querySelector('.nav__cartBtn__quantity').textContent = 1;
+  }
+}
+onLoadCartNumbers();
