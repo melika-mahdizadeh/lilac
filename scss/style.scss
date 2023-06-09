@@ -184,18 +184,19 @@ footer{
                 cursor: pointer;
             }
         }
-        .cart__total{
-            display: flex;
-            justify-content: space-between;
-            font-size: $fs-h5;
-            padding: .5rem;
-        }
-        .cart__checkout{
-            text-align: center;
-            border: solid .1rem $color-primary;
-            font-size: $fs-h5;
-            padding: 1rem;
-        }
+
+    }
+    .cart__total{
+        display: flex;
+        justify-content: space-between;
+        font-size: $fs-h5;
+        padding: .5rem;
+    }
+    .cart__checkout{
+        text-align: center;
+        border: solid .1rem $color-primary;
+        font-size: $fs-h5;
+        padding: 1rem;
     }
 }
 .hide{

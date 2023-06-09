@@ -173,13 +173,13 @@ footer a {
 .cart .cart__container .cart__product .cart__product__num {
   cursor: pointer;
 }
-.cart .cart__container .cart__total {
+.cart .cart__total {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
   padding: 0.5rem;
 }
-.cart .cart__container .cart__checkout {
+.cart .cart__checkout {
   text-align: center;
   border: solid 0.1rem #673DE6;
   font-size: 20px;

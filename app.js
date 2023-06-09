@@ -1,79 +1,87 @@
-let products = {
-  data: [
+let products = [
     {
       name: "Black leather bag",
-      price: "45",
+      price: 45,
       image: "images/black-bag.jpg",
       category: "bags",
-      color: "black"
+      color: "black",
+      inCart: 0
     },
     {
       name: "Magneta top",
-      price: "30",
+      price: 30,
       image: "images/magneta-top.jpg",
       category: "tops",
-      color: "magneta"
+      color: "magneta",
+      inCart: 0
     },
     {
       name: "blue jeans shoes",
-      price: "35",
+      price: 35,
       image: "images/blue-jeans-shoes.jpg",
       category: "shoes",
-      color: "blue"
+      color: "blue",
+      inCart: 0
     },
     {
       name: "green skirt",
-      price: "20",
+      price: 20,
       image: "images/green-skirt.jpg",
       category: "skirts",
-      color: "green"
+      color: "green",
+      inCart: 0
     },
     {
       name: "brown sunglasses",
-      price: "35",
+      price: 35,
       image: "images/sunglasses-brown.jpg",
       category: "sunglasses",
-      color: "brown"
+      color: "brown",
+      inCart: 0
     },
     {
       name: "yellow top",
-      price: "30",
+      price: 30,
       image: "images/yellow-top.jpg",
       category: "tops",
-      color: "yellow"
+      color: "yellow",
+      inCart: 0
     },
     {
       name: "metallic bag",
-      price: "30",
+      price: 30,
       image: "images/metalic-bag.jpg",
       category: "bags",
-      color: "white"
+      color: "white",
+      inCart: 0
     },
     {
       name: "magneta sandals",
-      price: "22",
+      price: 22,
       image: "images/magneta-sandals.jpg",
       category: "shoes",
-      color: "magneta"
+      color: "magneta",
+      inCart: 0
     },
     {
       name: "pink skirt",
-      price: "40",
+      price: 40,
       image: "images/pink-skirt.jpg",
       category: "skirts",
-      color: "pink"
+      color: "pink",
+      inCart: 0
     },
     {
       name: "blue jean bag",
-      price: "32",
+      price: 32,
       image: "images/blue-bag.jpg",
       category: "bags",
-      color: "blue"
+      color: "blue",
+      inCart: 0
     },
-  ]
-};
+];
 
-for(let i of products.data) {
+for(let i of products) {
   //card
   const p = document.getElementById("productsId");
   let card = document.createElement("div");
@@ -162,32 +170,3 @@ window.onload = () => {
   filterProduct("all");
 };
 
-
-// how many items are in cart
-let carts = document.querySelectorAll('.product__addBtn');
-
-for (let i=0; i<carts.length; i++) {
-  carts[i].addEventListener('click', () => {
-    cartNumbers();
-  })
-}
-
-function onLoadCartNumbers() {
-  let productNumbers = localStorage.getItem('cartNumbers');
-  if(productNumbers) {
-    document.querySelector('.nav__cartBtn__quantity').textContent = productNumbers;
-  }
-}
-
-function cartNumbers() {
-  let productNumbers = localStorage.getItem('cartNumbers');
-  productNumbers = parseInt(productNumbers);
-  if( productNumbers) {
-    localStorage.setItem('cartNumbers', productNumbers + 1);
-    document.querySelector('.nav__cartBtn__quantity').textContent = productNumbers + 1;
-  } else {
-    localStorage.setItem('cartNumbers', 1);
-    document.querySelector('.nav__cartBtn__quantity').textContent = 1;
-  }
-}
-onLoadCartNumbers();
